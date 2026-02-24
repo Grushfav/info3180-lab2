@@ -2,8 +2,6 @@ body {
     padding-top: 5rem;
 }
 
-
-
 .profile-header {
     background-color: #2ecc71;
     padding: 20px;
@@ -12,7 +10,11 @@ body {
     color: white;
 
 }
-.profile-header .username, .profile-header .location, .profile-header .joined { color: white; /* force white text */ }
+.profile-header .username,
+.profile-header .location,
+.profile-header .joined {
+    color: white;
+}
 .profile-card {
     max-width: 500px;
     margin: 40px auto;
