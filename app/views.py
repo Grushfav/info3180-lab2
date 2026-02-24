@@ -1,5 +1,6 @@
 from app import app
 from flask import render_template, request, redirect, url_for, flash
+from datetime import datetime
 
 
 ###
@@ -21,6 +22,12 @@ def about():
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+@app.route('/profile/')
+def profile():
+    """Render website's profile page."""
+    return render_template('profile.html')
+
+
 
 @app.route('/<file_name>.txt')
 def send_text_file(file_name):

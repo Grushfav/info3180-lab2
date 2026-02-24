@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="profile-card">
+    <div class="profile-header">
+        <img src="{{ url_for('static', filename='photos/my_photo.jpg') }}" alt="Profile Picture" class="profile-picture">
+        <h1>Gavin Seaton</h1>
+        <p class="username">@gavin_dev</p>
+        <p class="location">St. Catherine, Jamaica</p>
+        <!-- <p class="joined">Joined: February 2026</p> -->
+        <p class="joined">Joined: {{ format_date_joined(user_join_date) }}</p>
+
+
+
+    </div>
+    <div class="profile-bio"> 
+        <p> Final year Computer Science student, passionate about data modeling, automation, and building scalable systems.</p>
+    </div>
+    <div class="profile-stats">
+        <div class="stat">
+            <h3>51</h3>
+            <p>Posts</p>
+        </div>
+        <div class="stat">
+            <h3>1.2k</h3>
+            <p>Followers</p>
+        </div>
+        <div class="stat">
+            <h3>300</h3>
+            <p>Following</p>
+        </div>
+    </div>
+    <div class="profile-action"> <button class="follow-btn">Follow</button> 
+    </div>
+</div>
+
+{% endblock %}
