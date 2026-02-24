@@ -22,23 +22,19 @@ def about():
 ###
 # The functions below should be applicable to all Flask apps.
 ###
+from datetime import datetime
+
 def format_date_joined(date):
-    """ Given a date object, return it formatted as 'Mon, YYYY'. Example: Feb, 2021 """ 
-    if isinstance(date, str): 
-        # If a string is passed, try to parse it 
-         try: 
-              date = datetime.strptime(date, "%Y-%m-%d")
-         except ValueError: 
-             return "Invalid Date" 
+    if isinstance(date, str):
+        date = datetime.strptime(date, "%Y-%m-%d")
     return date.strftime("%b, %Y")
 
-# Register the function as a Jinja2 filter
-app.jinja_env.filters['format_date_joined'] = format_date_joined
 
-@app.route('/profile/')
+@app.route("/profile")
 def profile():
-    user_join_date = datetime(2026, 2, 24)
-    return render_template('profile.html', user_join_date=user_join_date)
+    join_date = datetime(2026, 3, 1)
+    return render_template("profile.html", user_join_date=join_date, format_date_joined=format_date_joined)
+
 
 
 

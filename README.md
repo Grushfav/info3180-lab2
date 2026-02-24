@@ -10,3 +10,21 @@ $ source venv/bin/activate (or .\venv\Scripts\activate on Windows)
 $ pip install -r requirements.txt
 $ flask --app app --debug run
 ```
+
+info3180-lab2/
+│
+├── app/
+│   ├── static/
+│   │   ├── css/
+│   │   │   └── app.css
+│   │   └── photos/
+│   │       └── my_photo.jpg
+│   ├── templates/
+│   │   ├── base.html
+│   │   ├── header.html
+│   │   └── profile.html
+│   └── views.py
+│
+├── run.py
+└── README.md
+

@@ -8,7 +8,8 @@
         <p class="username">@gavin_dev</p>
         <p class="location">St. Catherine, Jamaica</p>
         <!-- <p class="joined">Joined: February 2026</p> -->
-        <p class="joined">Joined: {{ user_join_date|format_date_joined }}</p>
+        <p class="joined">Joined: {{ format_date_joined(user_join_date) }}</p>
+
 
 
 
