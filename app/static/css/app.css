@@ -2,6 +2,12 @@ body {
     padding-top: 5rem;
 }
 
+.profile-header {
+    background: #2cce90;
+    color: white;
+    padding: 30px 0;
+    text-align: center;
+}
 .profile-card {
     max-width: 500px;
     margin: 40px auto;
